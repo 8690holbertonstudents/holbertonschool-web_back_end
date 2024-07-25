@@ -15,10 +15,11 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     uploadPhoto(fileName),
   ]);
 
-  const settledPromises = Promise.allSettled(allPromises).then((results) => {
+  Promise.allSettled(allPromises).then((results) => {
+    const outputResults = [];
     results.forEach((result) => {
-      console.log(result.status, result.value);
+      outputResults.push({ status: result.status, value: result.value });
     });
   });
-  return settledPromises;
+  return outputResults;
 }
