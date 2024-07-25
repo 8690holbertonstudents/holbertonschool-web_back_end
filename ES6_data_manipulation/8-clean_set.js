@@ -3,11 +3,7 @@ export default function cleanSet(set, startString) {
     throw new Error('Argument 1 must be a Set');
   }
 
-  if (typeof startString !== 'string') {
-    throw new Error('Argument 2 must be a string');
-  }
-
-  if (startString.length === 0) {
+  if (typeof startString !== 'string' || startString.length === 0) {
     return '';
   }
 
