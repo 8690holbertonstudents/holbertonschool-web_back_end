@@ -2,9 +2,10 @@
 """
 Module to use typed variables
 """
+from typing import List
 
 
-def sum_list(input_list: list[float]) -> float:
+def sum_list(input_list: List[float]) -> float:
     """
     Function to sum a list of floats
     Args:
@@ -12,6 +13,4 @@ def sum_list(input_list: list[float]) -> float:
     Returns:
         num (float): the sum of the list
     """
-    num: float = 0
-    for num in input_list:
-        return sum(input_list)
+    return sum(input_list)
