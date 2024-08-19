@@ -1,6 +1,6 @@
 # Pagination
 
-### 0. Simple helper function
+## 0. Simple helper function
 
 Write a function named index_range that takes two integer arguments page and page_size.
 
@@ -8,7 +8,8 @@ The function should return a tuple of size two containing a start index and an e
 
 Page numbers are 1-indexed, i.e. the first page is page 1.
 
-### 1. Simple pagination
+## 1. Simple pagination
+
 Copy index_range from the previous task and the following class into your code
 
 Implement a method named get_page that takes two integer arguments page with default value 1 and page_size with default value 10.
@@ -18,7 +19,8 @@ Use assert to verify that both arguments are integers greater than 0.
 Use index_range to find the correct indexes to paginate the dataset correctly and return the appropriate page of the dataset (i.e. the correct list of rows).
 If the input arguments are out of range for the dataset, an empty list should be returned.
 
-### 2. Hypermedia pagination
+## 2. Hypermedia pagination
+
 Replicate code from the previous task.
 
 Implement a get_hyper method that takes the same arguments (and defaults) as get_page and returns a dictionary containing the following key-value pairs:
@@ -33,7 +35,8 @@ Make sure to reuse get_page in your implementation.
 
 You can use the math module if necessary.
 
-### 3. Deletion-resilient hypermedia pagination
+## 3. Deletion-resilient hypermedia pagination
+
 The goal here is that if between two queries, certain rows are removed from the dataset, the user does not miss items from dataset when changing page.
 
 Start 3-hypermedia_del_pagination.py with this code:
@@ -50,4 +53,3 @@ Requirements/Behavior:
 Use assert to verify that index is in a valid range.
 If the user queries index 0, page_size 10, they will get rows indexed 0 to 9 included.
 If they request the next index (10) with page_size 10, but rows 3, 6 and 7 were deleted, the user should still receive rows indexed 10 to 19 included.
-
