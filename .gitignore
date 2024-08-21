@@ -5,3 +5,4 @@ package-lock.json
 package.json
 utils.js
 __pycache__
+temp/
