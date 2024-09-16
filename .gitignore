@@ -8,3 +8,4 @@ __pycache__
 temp/
 dump.zip
 dump/
+eslint.config.mjs
